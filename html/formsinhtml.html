@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms in HTML</title>
+</head>
+<body>
+    <!-- 
+        Forms - to collect the information from the user
+
+        form attributes-
+            Method - GET/POST
+            action - server side url
+            enc-type - 'multipart/form-data'
+
+        form Elements
+            - input elements
+            - text
+            - password
+            - hidden
+            - file
+            - radio
+            - checkbox
+        -dropdown 
+            - select
+                -option
+            -multiselect
+            - textarea
+     -->
+    <form action="#">
+        <div>
+        <label for="fname">FirstName:</label>
+        <input type="text" name="firstname" placeholder="Enter you firstname" id="fname" value="" required />
+    </div>
+        <label>lastName:</label>
+        <input type="text" name="lastname" placeholder="Enter you lastname" />
+
+        <label>email:</label>
+        <input type="email" name="email" placeholder="Enter you email" />
+
+        <label>password:</label>
+        <input type="password" name="password" placeholder="Enter you password" />
+
+        <!-- <label>hidden:</label>
+        <input type="hidden" name="password" placeholder="Enter you password" /> -->
+
+        <label>choose your file:</label>
+        <input type="file" name="file"  />
+        
+        <label>gender:</label>
+        <input type="radio" name="gender" /> Male
+        <input type="radio" name="gender" /> FeMale
+        <br />
+        <input type="checkbox"  />
+        <span>By clicking Sign Up, you agree to our Terms, Privacy Policy and Cookies Policy. You may receive SMS notifications from us and can opt out at any time.</span>
+
+        <select>
+            <option>select</option>
+            <option value="html">HTML</option>
+            <option value="css">CSS</option>
+            <option value="javascript">Javascript</option>
+            <option value="react">REACT</option>
+        </select>
+
+        <label>address</label>
+        <textarea></textarea>
+        <button type="submit">submit</button>
+        <input type="reset" value="Reset" >
+
+    </form>
+</body>
+</html>

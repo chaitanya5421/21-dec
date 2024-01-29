@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transform</title>
+    <style>
+      div {
+        border: 1px solid red;
+        padding: 20px;
+        margin-bottom: 10px;
+      }
+
+      .container div:first-child {
+            transform: translate(0px, 0px);
+      }
+      .container div:nth-child(2):hover {
+            transform: scale(0.2, 0.4);
+      }
+
+      .container div:nth-child(3) {
+            background-color: lightgreen;
+            /* transform: skew(2deg, 5deg); */
+      }
+
+      .container div:nth-child(4) {
+            background-color: yellow;
+            transform: rotate(90deg);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 
+        - Transform
+        - Transition 
+        - Animation
+     -->
+    <h2>Transform</h2>
+    <div class="container">
+      <div>Html</div>
+      <div>css</div>
+      <div>bootstrap</div>
+      <div>javascript</div>
+    </div>
+  </body>
+</html>

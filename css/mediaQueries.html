@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Media Queries in Css</title>
+    <style>
+      .figcard {
+        border: 1px solid gray;
+      }
+
+      .container {
+        display: flex;
+        /* flex-wrap: wrap; */
+      }
+      img {
+        width: 150px;
+        height: auto;
+      }
+
+      /* media queries */
+      @media only screen and (max-width: 600px) {
+        .container{
+            flex-wrap: wrap;
+            flex-direction: row-reverse;
+        }
+
+        figcaption{
+            background-color: chocolate;
+        }
+
+        section{
+            font-size: 25px;
+        }
+        
+      }
+
+      @media only screen and (min-width: 600px) and (max-width: 768px) {
+        figcaption{
+            background-color: blueviolet;
+            color: white;
+        }
+        .container{
+            flex-wrap: wrap;
+        }
+        section{
+            font-size: 20px;
+        }
+      }
+
+      @media only screen and (min-width: 768px) {
+        figcaption{
+            background-color: yellow;
+            color: white;
+        }   
+
+        section{
+            font-size: 18px;
+        }
+
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Media Queries in Css</h2>
+    <div class="container">
+      <figure class="figcard">
+        <img src="./images/iphone.jpg" />
+        <figcaption>Iphone1</figcaption>
+      </figure>
+      <figure class="figcard">
+        <img src="./images/iphone.jpg" />
+        <figcaption>Iphone2</figcaption>
+      </figure>
+      <figure class="figcard">
+        <img src="./images/iphone.jpg" />
+        <figcaption>Iphone3</figcaption>
+      </figure>
+      <figure class="figcard">
+        <img src="./images/iphone.jpg" />
+        <figcaption>Iphone4</figcaption>
+      </figure>
+    </div>
+    <div>
+        <section>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum in quo corrupti repellat sunt temporibus alias, porro omnis earum, quae iure possimus natus consequuntur modi!</section>
+    </div>
+  </body>
+</html>

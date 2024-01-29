@@ -1,0 +1,40 @@
+what is responsive web design?
+    -  A webpage can be adjusted their design as per the device view port.
+
+what is bootstrap?
+ - Bootstrap is a responsive mobile first framework.
+
+ Advantages of using bootstrap
+    - browser compatibility
+    - responsive layout
+    - speed up the development
+    - compatibility for maximum devices which were available in the market.
+    - easy to learn
+    - less size
+    - improves the performance
+    - less number of html and css
+
+why use it ?
+    - open source frontend framework for fast web development
+    - premade html/css templates and classes
+    - javascript widgets and plugins
+    - mobile first responsive layout
+
+    Features of Bootstrap
+        - grid system
+            - fluid/ flexible layout
+            - fixed layout
+
+        - Typogapy
+        - jumbotrans
+        - tabs
+        - Accordians
+        - coarusels
+        - tooltips
+        - tables
+        - forms
+        - lists
+        - navbars
+        
+
+

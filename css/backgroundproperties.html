@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Properties</title>
+    <style>
+        section{
+            border: 1px solid red;
+            padding: 20px;
+            margin-bottom: 10px;
+        }
+        .firstchild{
+            background-color: hsla(326, 74%, 57%, 0.3) ; /*predefined colors, hexadecimal, rgb(), rgba(), hsl(), hsla()*/
+        }
+
+        /* multi colors css */
+        .secondchild{
+            /* background: linear-gradient(to left, red, blue, green, yellow); */
+            background: radial-gradient(red, yellow, green);
+        }
+
+        
+    </style>
+</head>
+<body>
+    <h2>Background Properties</h2>
+    <section class="firstchild">HTML</section>
+    <section class="secondchild">CSS</section>
+    <section>JAVSCRIPT</section>
+</body>
+</html>

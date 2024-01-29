@@ -1,0 +1,19 @@
+h4{
+    color: white;
+    background-color: saddlebrown;
+}
+
+h3{
+    color:rebeccapurple;
+    background-color: green;
+}
+
+.para{
+    color: gold;
+    border: 2px dotted red;
+    background-color: slateblue;
+}
+
+#paraid{
+    color: aquamarine;
+}

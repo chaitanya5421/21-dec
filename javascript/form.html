@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>form validation</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      span {
+        color: red;
+      }
+      section {
+        display: flex;
+        padding: 60px;
+        justify-content: center;
+        align-items: center;
+      }
+      div {
+        border: 4px double #777777;
+        padding: 50px;
+        border-radius: 3px 80px;
+        background: lightskyblue;
+        box-shadow: 10px 15px 20px #5050f9;
+        width: 250px;
+      }
+      form span:nth-child(7) {
+        color: green;
+        position: relative;
+        left: 235px;
+        bottom: 26px;
+        text-shadow: 0px 0px 20px darkgreen;
+      }
+      input {
+        width: 100%;
+        height: 30px;
+      }
+      button {
+        width: 100%;
+        padding: 5px;
+        border: 2px outset gray;
+        border-radius: 15px 0px;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <div>
+        <form
+          action="submit.html"
+          onsubmit="return validateName()"
+          autocomplete="off"
+        >
+          <label>Full Name</label> <br /><br />
+          <input
+            id="name-value"
+            class="input-field"
+            type="text"
+            placeholder="Enter your name"
+          />
+          <br />
+          <span id="name-error" class="error"></span>
+          <span id="name-correct" class="correct"></span><br /><br />
+
+          <label>Email Address</label><br /><br />
+          <input
+            id="email-value"
+            class="input-field"
+            type="email"
+            placeholder="Enter your Email"
+          /><br />
+          <span id="email-error" class="error"></span><br /><br />
+
+          <label>Password</label><br /><br />
+          <input
+            id="password-value"
+            class="input-field"
+            type="password"
+            placeholder="Enter your Password"
+          /><br />
+          <span id="password-error" class="error"></span><br /><br />
+
+          <button id="btn" type="submit">Submit</button>
+        </form>
+      </div>
+    </section>
+
+    <script>
+      //Selecting input fields
+
+      const nameValue = document.getElementById("name-value");
+      const emailValue = document.getElementById("email-value");
+      const PwdValue = document.getElementById("password-value");
+      const btnbn = document.getElementById("btn");
+
+      //Selecting error fields
+
+      const nameError = document.getElementById("name-error");
+      const emailError = document.getElementById("email-error");
+      const pwdError = document.getElementById("password-error");
+
+      // Selecting the the fields when correct
+
+      const namecorrect = document.getElementById("name-correct");
+
+      //---------------------------------------------
+      //validation function for name field
+
+      function validateName() {
+        const fname = nameValue.value;
+
+        if (fname.length == 0) {
+          nameError.innerHTML = "Name is Required";
+          namecorrect.innerHTML = "";
+          btnbn.disabled = true;
+          return true;
+        }
+
+        if (!fname.match(/^[A-Za-z]{3,}\s[A-Za-z]+$/)) {
+          nameError.innerHTML = "Enter your full Name";
+          namecorrect.innerHTML = "";
+          btnbn.disabled = true;
+          return false;
+        } else {
+          nameError.innerHTML = "";
+          btnbn.disabled = true;
+          namecorrect.innerHTML = `<i class = 'fas fa-check-circle icon'></i>`;
+          return false;
+        }
+      }
+
+      nameValue.addEventListener("keyup", validateName);
+      nameValue.addEventListener("blur", validateName);
+
+      //----------------------------------------
+
+      //validation function for Email field
+
+      function validateEmail() {
+        const mail = emailValue.value;
+
+        if (mail.length == 0) {
+          emailError.innerHTML = "email is Required";
+          btnbn.disabled = true;
+          return false;
+        }
+        emailError.innerHTML = `<i class = 'fas fa-check-circle icon'></i>`;
+        btnbn.disabled = false;
+
+        if (!mail.match(/^[A-Za-z0-9]{3,}\@[a-zA-Z]\.[a-zA-Z]+$/)) {
+          emailError.innerHTML = "Enter your full email";
+          btnbn.disabled = true;
+          return false;
+        }
+
+        emailError.innerHTML = `<i class = 'fas fa-check-circle icon'></i>`;
+        btnbn.disabled = false;
+        return true;
+      }
+
+      emailValue.addEventListener("keyup", validateEmail);
+      emailValue.addEventListener("blur", validateEmail);
+
+      //--------------------------------------------
+      //validation function for Password field
+
+      function validatepwd() {
+        const pwd = PwdValue.value;
+
+        if (pwd.length == 0) {
+          pwdError.innerHTML = "Password is Required";
+          btnbn.disabled = true;
+          return false;
+        }
+        pwdError.innerHTML = `<i class = 'fas fa-check-circle icon'></i>`;
+        btnbn.disabled = false;
+
+        if (!pwd.match(/^[a-zA-Z0-9@$!]{6,9}$/)) {
+          pwdError.innerHTML = "Password must contain a number";
+          btnbn.disabled = true;
+          return false;
+        }
+
+        pwdError.innerHTML = `<i class = 'fas fa-check-circle icon'></i>`;
+        btnbn.disabled = false;
+        return true;
+      }
+
+      PwdValue.addEventListener("keyup", validatepwd);
+      PwdValue.addEventListener("blur", validatepwd);
+    </script>
+  </body>
+</html>

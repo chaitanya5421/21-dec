@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo Selectors - css</title>
+    <style>
+        /* ul li{
+          border: 1px solid red;  
+        }
+
+        ul li:first-child{
+            background-color: sienna;
+        }
+
+        ul li:last-child{
+            background-color: orange;
+        }
+
+        ul li:nth-child(2){
+            background-color: blue;
+        } */
+
+        /* ul li:nth-child(2n + 1){
+            background-color: blue;
+        }
+
+        ul li:nth-child(2n + 1):hover{
+            background-color:yellow;
+        } */
+        /* li:hover{
+            background-color: springgreen;
+        } */
+
+        a:active{
+            background-color: slateblue;
+            color:chocolate;
+        }
+        a:link{
+            background-color: pink;
+            color: darkred;
+        }
+        a:focus{
+            background-color: gray;
+            color:darkorchid;
+        }
+        a:visited{
+            background-color: green;
+            color:darkorange;
+        }
+
+        /* pseudo element selectors */
+        P::first-letter{
+            color: red;
+        }
+        P::first-line{
+            color: peru;
+            background-color: yellow;
+        }
+
+        P::selection{
+            background-color: darkcyan;
+        }
+
+        P::before{
+            content: "*****";
+        }
+        P::after{
+            content: "*****";
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <!-- 
+            pseudo selectors allows developers to style an element as per their state inside DOM
+
+            pseudo selectors are classifled into two types
+                - pseudo class selectors(selector: state of the element)
+                - Pseudo element selectors(selector :: state of the element)
+
+            anchor also have four state internally such as
+                a:link,
+                a:hover,
+                a:focus,
+                a:visited,
+                a:active
+         -->
+
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>Javascript</li>
+        <a href="#"><li>React</li></a>
+        <a href="#"><h2>This is a link</h2></a>
+    </ul>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur aliquam, laborum dolor dignissimos, ipsa consectetur necessitatibus et, error excepturi modi veritatis delectus? Tempore reprehenderit eveniet consectetur eos est hic fugit velit possimus rem. Consectetur aliquid sed doloremque qui blanditiis? Odio?</p>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combinator Selectors</title>
+    <style>
+        /* descendent selector */
+        ul .list{
+            border: 1px solid orange;
+            padding: 10px;
+            list-style-position: inside;
+        }
+
+        /* child selector */
+        ul > li{
+            background-color: yellow;
+        }
+
+        /* adjacent sibling selector */
+        .sectionclass + p{
+            font-size: 12px;
+            background-color: teal;
+        }
+
+        /* general sibling selector */
+        .sectionclass ~ p{
+            font-size: 12px;
+            background-color: steelblue;
+        }
+
+    </style>
+</head>
+<body>
+    <h2>Combinator Selectors</h2>
+    <!-- 
+        - descendent selector(space)
+        - child Selector(>)
+        - adjacent sibling selector(+)
+        - general sibling selector(~)
+     -->
+
+     <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li class="list">JAVASCRIPT</li>
+        <li>
+            <div class="list">This is div</div>
+            <div class="list">This is div</div>
+        </li>
+     </ul>
+
+     <div>
+        <section class="sectionclass">This is section</section>
+        <div>This is div</div>
+        <p>this is para</p>
+        <h1>This is heading</h1>
+     </div>
+
+</body>
+</html>

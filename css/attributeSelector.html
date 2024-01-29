@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attribute Selector</title>
+    <style>
+        /* has attribute */
+        [alt]{
+            border:2px solid red;
+        }
+
+        /* attr value equals to */
+        [type="text"]{
+            border: 2px dotted blue;
+        }
+
+        /* attr value starts with '^'  */
+        [src ^='./ima']{
+            background-color: yellow;
+            padding: 10px;
+        }
+
+        /* attr value ends with '$'  */
+        [href $='rs.asp']{
+            background-color: seagreen;
+            border: 2px solid blue;
+        }
+
+        /* attr value contains '*' */
+        [id *= 'tio']{
+            background-color: sienna;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- 
+        - semantic tags 
+        - non-semantic tags
+
+        attribute Selectors 
+            - has attribute
+            - attr value equals to
+            - attr value starts with '^'
+            - attr value ends with '$'
+            - attr value contains '*'
+     -->
+     <a href="https://www.w3schools.com/css/css_attribute_selectors.asp">
+        <h2>Attribute Selector</h2>
+    </a>
+    <section id="sectionid">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam minus quo nobis consequatur non cum quas assumenda vero voluptates sed. Aliquid voluptate nemo quis? Voluptates.</section>
+
+    <span>This is span</span>
+
+    <img  src="./images/iphone.jpg" alt="iphone"/>
+
+    <audio controls>
+        <source src="./multimedia/audio.mp3" type="audio/mp3" />
+    </audio>
+    <video controls>
+        <source src="./multimedia/video.mp4" type="video/mp4" />
+    </video>
+
+    <input type="text" >
+
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>creating layout using float</title>
+    <style>
+        .parentdiv{
+            border: 1px solid red;
+            float: left;
+            padding: 10px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .childdiv{
+            border: 1px solid green;
+            /* margin: 10px; */
+            /* float: left; */
+        }
+
+        .childdiv{
+            float:right;
+            width: 31%;
+            margin: 5px;
+        }
+
+        
+       
+    </style>
+</head>
+<body>
+    <div class="parentdiv">
+        <div class="childdiv child1">div1</div>
+        <div class="childdiv child2">div2</div>
+        <div class="childdiv child3">div3</div>
+    </div>
+</body>
+</html>

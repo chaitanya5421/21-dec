@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Positions in css</title>
+    <style>
+        body{
+            height: 1220px;
+        }
+        .posrel{
+            height:100px;
+            width: 100px;
+            background-color: red;
+            /* position:relative; */
+            top: 20px;
+        }
+
+        .posabs{
+            height:100px;
+            width: 100px;
+            background-color: yellow;
+            position:absolute;
+            top:0px;
+        }
+
+        .posfix{
+            position: fixed;
+            background-color: tomato;
+            right: 10px;
+        }
+        .possticky{
+            position: sticky;
+            top:0px;
+            background-color: seagreen;
+        }
+    </style>
+</head>
+<body>
+    <h2>Positions in css</h2>
+    <ul>
+        <li>Static</li>
+        <li>relative</li>
+        <li>absolute</li>
+        <li>fixed</li>
+        <li>sticky</li>
+    </ul>
+
+    <div class="posrel">
+         <div class="posabs"></div>
+    </div>
+    <div class="posfix">position fixed</div>
+    <div class="possticky">Sticky</div>
+   
+</body>
+</html>

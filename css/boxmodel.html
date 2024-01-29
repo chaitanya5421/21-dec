@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box model in CSS</title>
+    <style>
+        
+        .boxmodel{
+            border: 10px solid rebeccapurple;
+            /* border-top-width: 10px;
+            border-top-style: dotted;
+            height: 100px;
+            max-width: 400px;
+            border-radius: 30px; */
+            padding:10px 20px 15px 40px;
+        }
+        .parentdiv{
+            margin-right: 10px;
+            border: 1px solid blue;
+            display: flex;
+        }
+        .childdiv1{
+            margin-right: 10px;
+            border: 1px solid green;
+        }
+        .childdiv2{
+            margin-left: 10px;
+            border: 1px solid green;
+        }
+    </style>
+</head>
+<body>
+    <h2 class="boxmodel">Box model in CSS</h2>
+    <div class="parentdiv">
+        <div class="childdiv1">
+            <p>childdiv</p>
+        </div>
+        <div class="childdiv2">
+            <p>childdiv</p>
+        </div>
+    </div>
+</body>
+</html>
+
+git add .
+git commit -m "message"
+git push origin main

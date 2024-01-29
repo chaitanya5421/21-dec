@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creating layout using flex</title>
+    <style>
+         .parentdiv{
+            border: 1px solid red;
+            padding: 10px;
+            display: flex;
+            /* flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            align-items: center; */
+            /* align-content: space-evenly; */
+
+            height: 400px;
+        }
+
+        .childdiv{
+            border: 1px solid green;
+            width: 200px;
+            height: 100px;
+        }
+        /* .child1{
+            flex: 1;
+        }
+        .child2{
+            flex: 3;
+        }
+        .child3{
+            flex: 1;
+        } */
+        
+        .child1{
+            /* order:2; */
+            /* align-self: flex-end; */
+        }
+        .child2{
+            /* order:3; */
+            /* align-self: center; */
+
+        }
+        .child3{
+            /* order:1; */
+            /* align-self: flex-start; */
+
+        }
+    </style>
+</head>
+<body>
+    <div class="parentdiv">
+        <div class="childdiv child1" >div1</div>
+        <div class="childdiv child2" >div2</div>
+        <div class="childdiv child3" >div3</div>
+       
+    </div>
+</body>
+</html>
