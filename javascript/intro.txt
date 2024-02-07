@@ -1,0 +1,48 @@
+html - design a page
+css - styling the page
+
+Javascript - user interaction
+
+    - js is a scripting programming language
+    - js is lightweight
+    - Js is a light weight, interpreted, just-in-time(JIT) compiled programming language.
+    - it is a prototype single treaded dynamic programming language
+
+    - js uses interpreters
+
+    Loosely coupled languages and strictly coupled languages
+        - Javascript is a loosely coupled language.
+    
+
+    js is build by brendan eich
+    He also mozilla firefox.
+    MDN - build by brendan eich.
+
+
+    Javascript uses v8 engine
+
+    DataTypes - it determines what sort of data we should store in identifiers.
+
+ DataTypes
+            - Number
+            - string
+            - Boolean
+            - Null
+            - undefined
+            - object
+            - Symbol
+
+        two DataTypes  
+            - primitive DataTypes
+                    number, string, boolean, undefined, null
+            - non primitive DataTypes
+                object, function, array,regex
+        
+       
+        Primitive DataTypes
+            primitive data types are simple, immutable values
+        
+        non-primitive DataTypes
+            these are also known as reference types, are more compled and mutable
+    
+    
