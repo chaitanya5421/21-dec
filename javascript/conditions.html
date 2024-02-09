@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Conditions</title>
+  </head>
+  <body>
+    <!-- 
+        conditions - to make decisions
+         -  if condition
+         - if else condition
+         - else if condition
+         - switch conditon  
+
+         if conditon statement executes when condition is true
+        syntax: 
+        if(conditon){
+            statement(s)
+        }
+
+        -ifelse
+        if(condition){
+            // code to be executed
+        }else {
+            // code to execute
+        }
+
+        - else if
+        syntax:
+
+     -->
+
+    <script>
+      let age = 5;
+      if (age >= 14) {
+        console.log("student is allowed to admit in high school");
+      } else if (age > 11 && age <= 13) {
+        console.log("student is allowed to admit in primary school");
+      } else if (age > 6 && age <= 10) {
+        console.log("student is allowed to admit in elementary school");
+      } else {
+        console.log("student is allowed to admit in pre school");
+      }
+
+      // switch statement
+      // alert('this is conditions')
+      const day = prompt("please enter the day");
+      console.log(day);
+
+      switch (day) {
+        case "sunday":
+          document.write("its sunday, time to relax");
+          break;
+        case "monday":
+          document.write("its monday, time to work");
+          break;
+        case "tuesday":
+          document.write("its tuesday, again work");
+          break;
+        case "wednesday":
+          document.write("its wednesday, more work");
+          break;
+        case "thursday":
+          document.write("its thursaday, waiting for weekend");
+          break;
+        case "friday":
+          document.write("its friday, time to chill");
+          break;
+        case "saturday":
+          document.write("its saturday, enjoy");
+          break;
+        default:
+        document.write('please enter a valid input')
+      }
+    </script>
+  </body>
+</html>

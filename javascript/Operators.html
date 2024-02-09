@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operators in javascript</title>
+</head>
+<body>
+    <h2>Operators in javascript</h2>
+    <!-- 
+        Operators - to perform some Operations
+        Type 
+            - Arithmetic(+, -, *, /, %, ++, --)
+            - Assignment(=, +=, -=, *=, /=)
+            - Comparision(==, ===, >, <, >=, <=, !=)
+            - logical(&&, ||, !)
+            - conditional/ ternary()
+
+            - increment and decrement
+
+            / - return quotient
+            % - returns reminder
+
+     -->
+    <script>
+        const a = 10;
+        const b = 10;
+        const c = a + b;
+        console.log(c)
+
+        if(c){
+            console.log('it is true')
+        }
+
+
+        let valu1 = 50;
+        //post Increment
+        console.log(valu1++)
+        console.log(valu1)
+
+        //preincrement
+        let value2 = 30;
+        console.log(++value2)
+
+        //assignment operator
+        //+=
+        let value3 = 15;
+        let finalval = value3 += 5
+        console.log(finalval)
+
+        // comparision operator
+        const x = 10;
+        const y = '10';
+        console.log(x===y)
+
+        // differnce b/n == and ===
+
+        let marks = 50;
+        let attendance = 50;
+        // if(marks >= 50 && attendance > 60){
+        //     console.log('allow for practicals')
+        // }else{
+        //     console.log('dont allow for practicals ')
+        // }
+
+        // conditional/ternary operator(condi ? statement1 : statement2)
+        (marks >= 50 && attendance > 60) ? console.log('allow for practicals') :      console.log('dont allow for practicals ')
+
+    </script>
+</body>
+</html>

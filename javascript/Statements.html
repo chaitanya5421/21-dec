@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Statements in javascript</title>
+</head>
+<body>
+    <!-- 
+        Truth and falsy values
+
+        falsy values - false, 0, Null, undefined, NaN, ''
+        - BODMAS (brackets, order, division, Multiplication, addition, and subtraction)
+         25 + 10 / 5
+     -->
+    <script>
+        // type coercion
+
+        console.log(5 + 5 + '5' + "peter")
+        console.log(1 + 2 + 5 + "Hello" + 8 + 2)
+
+        console.log(15 - '5' - undefined)
+        console.log('5'-'3')
+        console.log(true + 1)
+        // concatenation
+        let age = 15; 
+        let name = "aswathi"
+        console.log('my age is'+ age + "years and my name is "+name)
+
+        // ES5 template/string literals
+        console.log(`my age is ${age} years and my name is ${name}`)
+
+    </script>
+</body>
+</html>
