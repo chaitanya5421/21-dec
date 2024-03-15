@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Function in javascript</title>
+  </head>
+  <body>
+    <h2>Functions in javascript</h2>
+    <button id="btn">Click here</button>
+    <!-- 
+        function - it is a subroutine contains of set of statements/ block of code, which can perform some specfic task.
+        
+        - Functions can be reusable
+    
+    Rules while creating a function
+        - Shouldn't start with number.
+        - shouldn't be reserved keyword
+        - shouldn't contain any special characters other than (_)
+
+        different types of creating funcitons
+            - Function without parameters
+            - Function with parameters
+            - Function with default parameters
+            - function with return statement
+            - named function
+            - Variable funciton
+            - anonymous funciton
+            - arrow functions(es6)
+            - callback function
+            - selfinvoking funciton
+            - nested function
+            - recursive function
+     -->
+    <script>
+      // function declaration
+      function greet() {
+        alert("helo World");
+      }
+      // greet()
+
+      //function with parameters
+      function fruitprocessor(apples, oranges = 2) {
+        const applePieces = apples * 4;
+        const orangepieces = oranges * 4;
+        console.log(
+          `juice with ${applePieces} pieces of apple, and juice with ${orangepieces} pieces of orange`
+        );
+      }
+      fruitprocessor(5, 4);
+
+      // funciton with return
+      // - a function can return zero are one value using return keyword
+      // - a funciton can also return another function
+
+      function addTwoNums(num1, num2) {
+        const res = num1 + num2;
+        console.log("before return");
+        return res;
+      }
+      const finalCount = addTwoNums(10, 20);
+      console.log(finalCount);
+
+      // variable function
+      const MobilePrice = function (price) {
+        console.log(`Mobile price is ${price}`);
+        function TotalpriceValue(items) {
+          const totalval = price * items;
+          console.log(`total price ${totalval}`);
+        }
+        TotalpriceValue(4);
+      };
+      MobilePrice(10000);
+
+      // anonomous function
+      document.getElementById("btn").addEventListener("click", redirectApple);
+
+      function redirectApple() {
+        window.location.href = "https://www.apple.com/";
+      }
+
+      // selfinvoking function
+      (function () {
+        console.log("this is self-invoking function");
+      })();
+    </script>
+  </body>
+</html>

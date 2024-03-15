@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strings in javascript</title>
+</head>
+<body>
+    <h2>Strings in javascript</h2>
+    <!-- 
+        there are two ways to create a string in js
+        - string literal
+        - string constructor
+     -->
+    <script>
+        //literal way
+        // let MobileName = "OnePlus";
+        // console.log(MobileName)
+
+        // constructor way
+        // const mobilePrice = new String('40000rs')
+        // console.log(typeof(mobilePrice))
+
+
+         // length starts with 1
+        // index starts with 0
+        const laptopName = 'macBook available'
+        // console.log(laptopName.length)
+        // console.log(laptopName[5])
+
+       //string concatenation
+    //    let firstName = "virat";
+    //    let lastName = "kohli";
+    //    console.log(`my name is ${firstName} ${lastName}`)
+
+        // string methods
+        // indexof - returns the index of first occurence of the given characters.
+
+        console.log(laptopName.indexOf('a'))
+
+        // lastindexOf() - returns the index of last occurrence of the given characters.
+        console.log(laptopName.lastIndexOf('a'))
+
+        //charAt() - returns character at specfic index.
+        let stringDef = 'Sequence Of Characters'
+        console.log(stringDef.charAt(5))
+
+        console.log(stringDef.charCodeAt(5))
+
+        // substring - extract portion of a string
+        console.log(stringDef.substring(3,5))
+
+        // split - converts string into array
+        console.log(stringDef.split(' '))
+
+        // tolowercase - it converts string to lowerCase
+        console.log(stringDef.toLowerCase())
+
+        // touppercase - it converts string to upperCase
+        console.log(stringDef.toUpperCase())
+
+        //concat - merge two strings
+        console.log(stringDef.concat(laptopName))
+        
+    </script>
+</body>
+</html>

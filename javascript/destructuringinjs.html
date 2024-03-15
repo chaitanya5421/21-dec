@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructuring in javascript</title>
+</head>
+<body>
+    <script>
+        const countries = ['india', ['usa','germany', 'china'], 'japan', 'italy', 'canada']
+
+        // const a = countries[1]
+
+        // destructuring
+        // const [a,b,c,,d] = countries
+        // console.log(a, b, c, d)
+
+        // const names = ['peter', 'james', 'parker', 'ramesh']
+        // const [a, b, c, d=10] = names
+        // console.log(a,b, c, d)
+
+
+        // destructuring an object 
+        const person = {
+            name: 'william',
+            father:'johnson',
+            hobbies: ['reading', 'sports', 'travelling'],
+            friends:['mark', 'kyle', 'nick'],
+            mother:'soumya'
+        }
+
+        // const {name:firstName, father} = person
+        // console.log(firstName, father)
+
+        //nested object
+        // const obj = {
+        //     a:1,
+        //     b:{
+        //         c:2,
+        //         d:3
+        //     },
+        //     e:4
+        // }
+
+        // const {a,b:{c, d}, e} = obj
+        // console.log(a,c,d, e)
+
+        // for array 
+         const obj = {
+            a:1,
+            b:{
+                c:2,
+                d:3
+            },
+            e:4,
+            d:[1,2,3]
+        }
+        const {a, b:{c,d}, e, d:[ele1, ele2]} = obj
+
+        console.log(ele1, ele2)
+
+        const {name, mother="jessica"} = person
+        console.log(name, mother)
+
+       
+</script>
+</body>
+</html>

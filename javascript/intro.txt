@@ -44,5 +44,19 @@ Javascript - user interaction
         
         non-primitive DataTypes
             these are also known as reference types, are more compled and mutable
-    
-    
+
+- conditions 
+- operators
+- loops
+- statements
+- string and string methods
+- array and array methods
+- object and object methods
+- Math and Date
+- functions
+- DOM
+- events
+
+----------
+not covered 
+    - callback function

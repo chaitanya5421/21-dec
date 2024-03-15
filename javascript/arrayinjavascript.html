@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array in js</title>
+</head>
+<body>
+    <h2>Array in js</h2>
+    <!-- 
+        array - continous memory allocation of same or different types.
+        - an array can be accessed using the zero based index. 
+
+
+        There are two ways to create an array 
+        - literal 
+        - constructor
+     -->
+
+     <script>
+        // array literal
+        let arr = [1,2,3,4,5]
+        // console.log(typeof(arr))
+
+        //array constructor
+        let smartPhones = new Array('iphone', 'oneplus', 'samsung', 'vivo')
+        console.log(typeof(smartPhones))
+
+        // iterate over an array
+        const cities = ['bangalore', 'chennai', 'kochi', 'mumbai']
+        for(let i=0; i<cities.length; i++){
+            console.log(cities[i])
+        }
+
+        //array Methods
+        // - push() - adds one or more values into an array at last postion.
+        cities.push('delhi', 'pune')
+
+        // pop() - it removes an item from array at last position
+        cities.pop()
+
+        //shift - removes an item from an array at beginning position
+        cities.shift()
+
+        // unshift - it add one or more values into an array at the beginning positon
+        cities.unshift('kolkata', 'hyderabad')
+        console.log(cities)
+
+        // indexOf
+    //    console.log(cities.indexOf('chennai'))
+
+        // includes
+        // console.log(cities.includes('chennai'))
+
+        //slice
+        // console.log(cities.slice(1,4))
+
+        //splice
+        cities.splice(1,2, "patna")
+        console.log(cities)
+
+
+        //join() - it converts an array into string
+        console.log(cities.join('*'))
+        
+        //reverse()- ite reverse the order of  an array
+        console.log(cities.reverse())
+
+
+
+        // reverse the string 'aswathi' using methods and without methods for string and array 
+        
+
+     </script>
+</body>
+</html>

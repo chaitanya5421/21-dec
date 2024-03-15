@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Operators</title>
+</head>
+<body>
+    <h2>Modern Operators</h2>
+    <script>
+         // Spread Operator(...)
+        // const countries = ['india', 'china', 'japan', 'italy', 'canada'] 
+
+        // const newList = ['usa', ...countries, 'France']
+        // console.log(newList)
+
+        // const fruits = ['apple', 'grapes', 'kiwi', 'orange']
+        // // const newFruits = fruits
+        // const newFruits = [...fruits]
+        // newFruits.push('banana')
+        // console.log(fruits, newFruits)
+
+        // const car = {
+        //     brand: 'honda',
+        //     model:'city'
+        // }
+
+        // const newcar = {...car, city:"bangalore"}
+        // console.log(newcar)
+
+        // rest operator(...)
+          const countries = ['india', 'china', 'japan', 'italy', 'canada']  
+          const [a,b, ...others] = countries
+        console.log(others)
+
+            const arr = [1,2,3,4,5]
+
+            function printNums(...list){ // rest operator
+                for(let i = 0;i<list.length;i++){
+                    console.log(list[i])
+                }
+            }
+
+            printNums(...arr) //spread operator 1,2,3,4,5
+    </script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math And date Methods</title>
+</head>
+<body>
+    <h2>Math in javascript</h2>
+    <script>
+        // Math object
+        const price = 204.13;
+        // console.log(`round of ${price} is ${Math.round(price)}`)
+
+    //     //ceil
+    //     console.log(`ceil of ${price} is ${Math.ceil(price)}`)
+
+    //     //floor
+    //     console.log(`floor of ${price} is ${Math.floor(price)}`)
+
+    //     //absolute
+    //     console.log(`absolute value of ${price} is ${Math.abs(price)}`)
+
+    //     //power
+    //     console.log(`power of 10,4 is ${Math.pow(10,4)}`)
+
+    //     //sqrt
+    //     console.log(`square root of 16 is ${Math.sqrt(16)}`)
+
+    //     //maximum
+    //    console.log(`Maximum number of 10,20,40,15,39 is ${Math.max(10,20,40,15,39)}`)
+
+    //    //minimum
+    //    console.log(`minimum value of 10,20,40,15,39 is ${Math.min(10,20,40,15,39)}`)
+
+    //    //random
+    //    console.log(`Random number is ${Math.random()}`)
+
+        // Date method 
+        const today = new Date()
+        console.log(today)
+
+        console.log(`Today number is ${today.getDay()}`)
+
+        const days = ['sun', 'mon', 'tue', 'wed', 'thu', 'fri', 'sat']
+        console.log(days[today.getDay()])
+
+        console.log(`${today.getMonth()}`)
+        console.log(`${today.getFullYear()}`)
+        console.log(`${today.getHours()}`)
+        console.log(`${today.getMinutes()}`)
+        
+    </script>
+</body>
+</html>

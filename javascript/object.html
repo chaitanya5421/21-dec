@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects in Javascript</title>
+</head>
+<body>
+    <h2>Objects in Javascript</h2>
+<!-- 
+    object - An object is an non primitive data type. Object Holds multiple values 
+    in terms of properties(keys and Values)
+    - object keys are always strings
+
+    There are three ways to create an object
+     - object literal
+     - object constructor
+     - constructor function
+
+ -->
+    <script>
+        const car = ['red', 100000, 25, 'sedan']
+
+        // object literal
+        const carDetails = {
+            brand: 'audi',
+            price: '1M',
+            color: 'red',
+            milege: 10
+        }
+
+        console.log(carDetails.price)
+        // object Constructor
+        const laptop = new Object()
+        laptop.brand = 'lenovo';
+        laptop.color = "black";
+
+        // dot notation
+        console.log(laptop.color)
+
+        // bracket notation
+        // inside the bracket specfic object key as string
+        const person = {
+            firstName: "peter",
+            lastName: 'parker',
+            age: 25,
+            job:"Engineer"
+        }
+        person.experience = "2years"
+        console.log(person)
+
+
+        const value = person['firstName']
+        console.log(value)
+
+        const x = 'Name'
+        const name1 = person['first' + x]
+        const nameLast = person['last' + x]
+        console.log(nameLast)
+
+
+        //bracket notation object value
+        person['country'] = 'USA'
+        console.log(person)
+
+        // array of objects
+        const data = [
+        {
+            firstName: "peter",
+            lastName: 'parker',
+            age: 25,
+            job:"Engineer"
+        },
+        {
+            firstName: "peter",
+            lastName: 'parker',
+            age: 25,
+            job:"Engineer"
+        },
+        {
+            firstName: "peter",
+            lastName: 'parker',
+            age: 25,
+            job:"Engineer"
+        }
+        ]
+        
+        //object methods
+        // object.keys()
+        const keyslist = Object.keys(person)
+        console.log(keyslist)
+
+        // object.Values()
+        // const objValues = Object.values(person)
+        // console.log(objValues)
+
+        //object.entries()
+        // const objEntries = Object.entries(person)
+        // console.log(objEntries)
+
+        // object.create()
+        // const newPerson = Object.create(person)
+        // console.log(newPerson.age = 30)
+        // console.log(newPerson)
+
+        //object.assign()
+        // const newObj = Object.assign(car, person)
+        // console.log(newObj)
+
+        // object.freeze() - it will not allaw to add new properties and also not allow to modify the existiong properties
+        // Object.freeze(person)
+        // person.firstName = 'william'
+        // console.log(person)
+
+        // object.seal() - it will not allow to add new properties and allow to modify the existing one
+        Object.seal(person)
+        person.brother = "james"
+        console.log(person)
+    </script>
+</body>
+</html>

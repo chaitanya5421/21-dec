@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM part1</title>
+  </head>
+  <body>
+    <h2 id="main-title">DOM</h2>
+    <!-- 
+        there are 5 ways to select html elements
+        selectors in javascript
+        - getElementById()
+        - getElementsByClassName()
+        - getElementsByTagName()
+        - querySelector()  
+        - querySelectorAll() 
+     -->
+
+    <div>
+      <ul class="container">
+        <li class="item1">HTML</li>
+        <li id="item2">CSS</li>
+        <li class="item3">Javascript</li>
+      </ul>
+    </div>
+
+    <script>
+        document.getElementById('item2').style.border = "1px solid red"
+        
+    </script>
+  </body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scoping injavascript</title>
+  </head>
+  <body>
+    <!-- 
+        Javascript engine consists of two things
+        - call stack
+        - heap(to store data)
+
+        Execution context - 
+            Environment in which piece of javascript is executed. stores all the necessary information to be executed.
+        
+            There are one global execution context which includes all top level code.
+
+            - one execution context per function.
+
+        Execution context made up of 
+        - variable environment
+        - scope chain 
+        - this keyword
+
+
+        scoping - variables organised and accessed, where do variables live? where we can able to access and where not.
+
+             environment in which certain variables is declared.
+
+             global scope, function scope and block scope.
+     -->
+
+    <script>
+    //   const name = "peter";
+
+    //   function first() {
+    //     let a = 1;
+    //     const b = second();
+
+    //     a = a + b;
+
+    //     return a;
+    //   }
+
+    //   function second() {
+    //     var c = 2;
+    //     return c;
+    //   }
+
+    //   let x = first();
+
+    //   console.log(x);
+
+      // global scope
+      // let a = 1;
+      // const b = 2;
+      // var c = 3;
+
+      // console.log(a, b, c)
+
+      // if(true){
+      //     console.log(a, b, c)
+      // }
+
+      // function print(){
+      //     console.log(a, b, c)
+      // }
+
+      // print()
+      // variables declared in global scope are accessible everywhere
+
+      // function scope
+      function print() {
+        let a = 1;
+        const b = 2;
+        var c = 3;
+      }
+
+    //   print()
+    //   console.log(c)
+
+      // variables inside a function can be accessed only inside a function, not outside
+
+      //block scope(es6)
+      let x = 5;
+
+      if(true){
+        let a = 1;
+        const b = 2;
+        var c = 3; 
+      }
+      console.log(a,b,c)
+
+
+      const firstName = "James";
+
+      function first(){
+        const age = 25;
+        if(age>=20){
+            const decade = 2;
+            var millennial = true;
+        }
+        function second(){
+            const job = "engineer";
+            console.log(`${firstName} is a ${age} - old ${job}`)
+        }
+        second()
+
+      }
+
+      first()
+    </script>
+  </body>
+</html>

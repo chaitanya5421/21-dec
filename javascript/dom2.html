@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM2</title>
+    <style>
+        .container{
+            display: flex;
+        }
+        .flexItems{
+            flex:1;
+        }
+    </style>
+</head>
+<body>
+    <section class="container"></section>
+    <script>
+        const students = ['ravi', 'santhosh', 'mahesh', 'peter']
+        const userdata = [
+            {
+                discount:"20% Off On Tank Tops",
+                description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ac dictum.",
+                image:'https://websitedemos.net/brandstore-02/wp-content/…oads/sites/150/2018/12/women-fashion-free-img.jpg'
+            },
+            {
+                discount:"Latest Eyewear For You",
+                description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ac dictum.",
+                image:'https://websitedemos.net/brandstore-02/wp-content/…oads/sites/150/2018/12/women-fashion-free-img.jpg'
+            },
+
+        ]
+        // let parentEle = `
+        // <section>
+        //     <div>${students[0]}</div>    
+        //     <div>${students[1]}</div>    
+        //     <div>${students[2]}</div>    
+        //     <div>${students[3]}</div>    
+        // </section>
+        // `
+
+        let str = '';
+        for(let i = 0; i<students.length; i++){
+            str += `<div class="flexItems">${students[i]}</div>`
+        }
+
+        document.getElementsByTagName('section')[0].innerHTML = str
+        // console.log(str)
+
+        // table
+        const data = [
+            {id:101, name:'kushal', city:'bangalore', salary:'10000'},
+            {id:102, name:'ramesh', city:'chennai', salary:'20000'},
+            {id:103, name:'praveen', city:'hyderabad', salary:'30000'},
+            {id:104, name:'ramya', city:'pune', salary:'40000'},
+            {id:105, name:'satvik', city:'kolkata', salary:'50000'},
+        ]
+    </script>
+</body>
+</html>

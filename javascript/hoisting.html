@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoisting in js</title>
+</head>
+<body>
+    <h2>Hoisting in js</h2>
+    <!-- 
+        hoisting -- making some types of variables accessible in the code before they are actually declared. variables lifted to their top scope.
+     -->
+
+     <button>Click here</button>
+    <script>
+        // debugger;
+        'use strict'
+
+        let a = 10;
+        console.log(a);
+
+      function greet(){
+        'use strict'
+            console.log("hello world")
+            console.log(this)
+        }
+        greet();
+
+        const btn = document.querySelector('button')
+        btn.addEventListener('click', function(){
+            console.log(this)
+        })
+        // if(true){
+        //     const x = 10;
+        //     let y = 20;
+        //     var z = 30;
+        // }
+
+        // console.log(x, y, z)
+
+        // this keyword
+        // const person = {
+        //     firstName : 'peter',
+        //     age:15,
+        //     info: function(){
+        //         console.log(`my name is ${this.firstName}`)
+        //         console.log(this)
+        //     }
+        // }
+
+        // person.info()
+
+        // console.log(this)
+
+
+
+        
+    </script>
+</body>
+</html>

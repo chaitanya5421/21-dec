@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regex Patterns</title>
+</head>
+<body>
+        <!-- 
+            // ^ - starting
+            // $ - ending
+
+            Brackets - defines the range of characters.
+            [abc] => a,b,c
+            [^abc] => any character except a,b,c
+            [a-z] => any character from small a to z.
+            [A-Z] => any character from uppercase A to Z.
+            [a-zA-Z] => any character form a to z and A to Z.
+            [0-9] => should contain numbers from 0-9
+            [^0-9]
+
+            Quantifiers - which gives the information about the repetitions.
+            []? - occurs 0 or 1 times.
+            []+ - occurs 1 or more times.
+            []* - occurs or more times.
+            []{n} - n times.
+            []{n, } - occurs n or more times
+            []{x,y} - occurs at least x times or less than y times
+
+            Modifiers
+            g - it performs global match
+            i - it performs case insensitive match
+            m - it performs multiline matching
+
+            reEx meta characters
+            \d - [0-9] - accepts allt numbers from 0-9
+            \D - [^0-9] - accepts all the numbers except 0 and 9
+            \w - [a-zA-z0-9] - accepts a-z, A-Z and 0-9
+            \W - [^a-zA-z0-9] - except this characters it accepts other like special characters.
+            \s - space
+        
+            
+         -->
+
+    <script>
+        const str = "Javascript is best";
+        const pattern = /is/g;
+
+        console.log(pattern.test(str))
+
+        console.log(str.match(pattern)) // it returns a array, if doesn't match it returns null
+
+        const mob = "8989898989";
+
+        console.log(mob.match(/^[8,9][0-9]{9}$/))
+
+       
+
+
+    </script>
+</body>
+</html>
