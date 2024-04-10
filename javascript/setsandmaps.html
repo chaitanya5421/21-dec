@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sets and maps</title>
+</head>
+<body>
+    <h2>sets</h2>
+    <!-- 
+        A set is a collection of items which are unique. no elements can be repeated.
+        set elements are ordered.
+     -->
+
+     <script>
+        // const arr = [1,2,3,4,5,2,3,4]
+
+        // const newSet = new Set(['russia','india', 'italy', 'usa', 'india', 'russia'])
+
+        // console.log(newSet)
+
+        // console.log(newSet.size)
+
+        // console.log(newSet.has('usa'))
+
+        // newSet.add('france')
+        // console.log(newSet)
+
+        // // delete
+        // newSet.delete('italy')
+        // console.log(newSet)
+
+        // newSet.clear()
+        // console.log(newSet)
+
+        // maps
+    //    - map is a collection of elements where each element is stored as key, value pairs.
+    
+    const person = new Map()
+    person.set("name", "peter")
+    person.set(28, 'age')
+    person.set('city', 'mumbai')
+    person.set(null, 10)
+
+    console.log(person)
+
+    const a = person.get('name')
+    console.log(a)
+
+    console.log(person.size)
+    person.delete(null)
+    console.log(person)
+
+    
+     </script>
+</body>
+</html>

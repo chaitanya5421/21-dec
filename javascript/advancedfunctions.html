@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced functions</title>
+</head>
+<body>
+    <h2>Advanced functions</h2>
+    <!-- 
+    -->
+
+    <script>
+        // first class function 
+        let x = 10;
+
+        let print = function(){}
+
+        const person = {
+            name:'xyz',
+            info:function(){ 
+            }
+        }
+
+        // higher order funcitons
+        // - function that receives another function as an argument, that returns a new function.
+
+        function add(a, b){
+
+            return function(){
+                console.log(a+5)
+            }
+        }
+
+        const result = add(2, function(){})
+        console.log(result)
+
+        // callback function
+        // the function which is passing as an argument is called callback.
+
+        const btn = document.querySelector('button')
+        
+        btn.addEventListener('click', function(){
+            console.log('button is clicked')
+        })
+        
+    </script>
+</body>
+</html>

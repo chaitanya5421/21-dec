@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Operators</title>
+</head>
+<body>
+    <h2>Modern Operators 2</h2>
+
+    <script>
+        // short circuit
+        console.log(3 || "peter")
+
+        console.log("" || "hello")
+
+        console.log(true || 0)
+
+        console.log(undefined || null)
+
+        console.log(undefined || 0 || "" || 'hello' || "" || null)
+
+        // the || operator will return the first truth value of all the operands, or simply the last value if all of them are falsy.
+
+        const car = {
+            make: "honda",
+            km:10
+        }
+
+        console.log(`distance travelled by car is ${car.km}`)
+
+        if(car.km){
+            console.log(`distance travelled by car is ${car.km}`)
+        }else {
+            console.log('no data found')
+        }
+
+        console.log(car.km || 'no data found')
+
+        // AND
+        console.log(0 && "peter")
+
+        console.log(7 && "peter")
+
+        console.log("hello" && 23 && null && "peter")
+
+        console.log(`the brand is ${car.make}`)
+
+        // nullish 
+        // only null and undefined is falsy
+
+        console.log(car.km ?? 'no data found')
+        
+
+        // optional chaining(?.)
+        const restaurant = {
+            name:"starbucks",
+            openingHours:{
+                thu:{
+                    open:12,
+                    close:10
+                },
+                fri:{
+                    open:11,
+                    close:11
+                },
+                sat:{
+                    open:7,
+                    close:2
+                }
+            }
+        }
+
+        console.log(restaurant?.openingHours?.thu?.open ? 'executed' : 'not executed')
+    </script>
+</body>
+</html>

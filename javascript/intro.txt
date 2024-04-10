@@ -56,6 +56,15 @@ Javascript - user interaction
 - functions
 - DOM
 - events
+- form validation
+- regex 
+- hoisting
+- scoping
+- this 
+- call stack and heap
+- destructuring
+- modern operators(spread, rest)
+- modern operators
 
 ----------
 not covered 

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promises in js</title>
+</head>
+<body>
+    <h2>Promises in js</h2>
+    <!--  
+        Promises - an object that is used as a placeHolder for the future result of an async operation.
+        
+        - a container for the asynchronous delivered value.
+
+    -->
+
+    <script>
+        const promise = new Promise((resolve, reject) => {
+            if(Math.random() > 0.5){
+                resolve('you won')
+            }
+            reject('you lost')
+        })
+
+        promise.then((data) => {
+            console.log(data)
+        }).catch((data) => {
+            console.log(data)
+        }).finally(()=>{
+            console.log('done')
+        })
+
+    </script>
+
+</body>
+</html>
