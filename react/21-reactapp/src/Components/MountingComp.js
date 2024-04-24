@@ -43,7 +43,7 @@ class MountingComp extends Component {
             </thead>
             <tbody>
               {this.state.users.map((user, index) => (
-                <tr>
+                <tr key={user.id}>
                   <td>{user.id}</td>
                   <td>{user.name}</td>
                   <td>{user.username}</td>

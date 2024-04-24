@@ -5,6 +5,8 @@ import Counter from "./Components/Counter"
 import Stylings from "./Components/Stylings/Stylings"
 import MountingComp from "./Components/MountingComp"
 import Pagination from "./Components/Pagination"
+import Navbar from "./Components/Navbar"
+import Routing from "./Components/Routing/Routing"
 
 const App = () => {
   // props 
@@ -12,14 +14,17 @@ const App = () => {
   // it is to pass data form one component to another component.
   const data = ['peter',25, 'peter@gmail.com']
   return(
-    <center>
+    <>
+      <Navbar />
+      <Routing />
+
       {/* <FuncComp phoneName="oneplus" data={data} /> */}
       {/* <ClassComp phoneName="iphone" /> */}
       {/* <Counter /> */}
       {/* <Stylings /> */}
       {/* <MountingComp /> */}
-      <Pagination />
-    </center>
+      {/* <Pagination /> */}
+    </>
   )
 }
 export default App
