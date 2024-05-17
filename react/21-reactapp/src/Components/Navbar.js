@@ -67,6 +67,16 @@ const Navbar = () => {
                   Contactus
                 </Link>
               </li>
+              <li class="nav-item">
+                <Link to="/usecontext" class="nav-link" href="#">
+                   UseContextHook
+                </Link>
+              </li>
+              <li class="nav-item">
+                <Link to="/useref" class="nav-link" href="#">
+                   UseRefHook
+                </Link>
+              </li>
               <li class="nav-item dropdown">
                 <a
                   class="nav-link dropdown-toggle"

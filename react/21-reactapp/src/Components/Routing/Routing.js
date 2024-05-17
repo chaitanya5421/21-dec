@@ -9,6 +9,8 @@ import Pagination from '../Pagination'
 import UnmountingTime from '../UnmountingTime'
 import UseStateCounter from '../hooks/UseStateCounter'
 import UseeffectPagination from '../hooks/UseeffectPagination'
+import UseContextHook from '../hooks/UseContextHook'
+import UseRefHook from '../hooks/UseRefHook'
 
 const Routing = () => {
   return (  
@@ -21,6 +23,8 @@ const Routing = () => {
         <Route path='/unmounting' element={<UnmountingTime />} />
         <Route path='/usestatecounter' element={<UseStateCounter />} />
         <Route path='/useeffecthook' element={<UseeffectPagination />} />
+        <Route path='/usecontext' element={<UseContextHook />} />
+        <Route path='/useref' element={<UseRefHook />} />
         <Route path='*' element={<NotFound />} />
     </Routes>
   )

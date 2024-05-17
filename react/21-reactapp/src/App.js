@@ -7,6 +7,7 @@ import MountingComp from "./Components/MountingComp"
 import Pagination from "./Components/Pagination"
 import Navbar from "./Components/Navbar"
 import Routing from "./Components/Routing/Routing"
+import DropDown from "./DropDown"
 
 const App = () => {
   // props 
@@ -15,7 +16,8 @@ const App = () => {
   const data = ['peter',25, 'peter@gmail.com']
   return(
     <>
-      <Navbar />
+    {/* <DropDown /> */}
+      <Navbar /> 
       <Routing />
 
       {/* <FuncComp phoneName="oneplus" data={data} /> */}
