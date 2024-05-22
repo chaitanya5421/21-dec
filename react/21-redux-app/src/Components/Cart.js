@@ -1,9 +1,16 @@
 import React from 'react'
-import { Link, useSelector } from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux'
+import { Link } from 'react-router-dom'
+import { remove } from '../Redux/CartSlice'
 
 const Cart = () => {
+  const dispatch = useDispatch()
   const cartItems = useSelector((state => state.cart))
-  console.log(cartItems)
+  
+  const handleRemove = (id) => {
+    dispatch(remove(id))
+  }
+
   return (
     <div className='container'>
       <div className='row my-5'>
@@ -14,9 +21,11 @@ const Cart = () => {
                 <div className="card mb-3 shadow">
                   <div className="row g-0">
                     <div className="col-md-4">
+                    <Link to={`/product/${item.id}`} className='text-decoration-none'>
                       <div className='d-flex justify-content-center align-items-center py-2'>
                         <img src={item.image} className="img-fluid rounded-start " alt="..." style={{ height: "150px" }} />
                       </div>
+                      </Link>
                     </div>
                     <div className="col-md-8">
                       <div className="card-body text-start">
@@ -25,8 +34,10 @@ const Cart = () => {
                         <h5 className='font-weight-bold py-2'>$ {item.price}</h5>
                       </div>
                       <div className='mb-5 text-start d-flex'>
-                        <a className='link px-2' href="#">SAVE FOR LATER</a>
-                        <a className='link px-2' href="#">REMOVE</a>
+                        <button className='btn btn-warning me-2'>SAVE FOR LATER</button>
+                        <button className='btn btn-danger'
+                        onClick={()=>{handleRemove(item.id)}}
+                        >REMOVE</button>
                       </div>
                     </div>
                   </div>

@@ -7,6 +7,7 @@ import { useDispatch } from 'react-redux'
 
 const Product = () => {
   const [product, setProduct] = useState({})
+  const [added, setAdded] = useState(false)
   const { myid } = useParams()
   const navigate = useNavigate()
   const dispatch = useDispatch()
@@ -27,6 +28,7 @@ const Product = () => {
 
   const handleAdd = (product) => {
       dispatch(add(product))
+      setAdded(true)
   }
 
   return (
@@ -54,7 +56,7 @@ const Product = () => {
                     className="btn btn-warning"
                     onClick={() => {handleAdd(product)}}
                   >
-                    Add To Cart
+                   {added ? 'Added' : 'Add To Cart'}
                   </button>
                 </div>
               </div>
